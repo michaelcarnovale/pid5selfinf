@@ -328,8 +328,8 @@ pp.full$schiz.neoo.z = scale(pp.full$schiz.neoo.count)
 
 ## Summing the z-scores
 
-pp.full$gen.z = (pp.full$anti.siffm.count.z + pp.full$anti.neos.count.z + pp.full$anti.neoo.count.z +
-                   pp.full$avoid.siffm.z + pp.full$avoid.neos.z + pp.full$avoid.neoo.z +
+pp.full$gen.z = (pp.full$anti.siffm.count.z + pp.full$anti.neos.count.z + pp.full$anti.neoo.count.z 
+                 + pp.full$avoid.siffm.z + pp.full$avoid.neos.z + pp.full$avoid.neoo.z +
                    pp.full$b.siffm.z + pp.full$b.neos.z + pp.full$b.neoo.z +
                    pp.full$nar.siffm.z + pp.full$nar.neos.z + pp.full$nar.neoo.z +
                    pp.full$obs.siffm.z + pp.full$obs.neos.z + pp.full$obs.neoo.z +
@@ -461,13 +461,15 @@ round((corr.test(pp.cor3, method = &quot;spearman&quot;)$r), 2)</code></pre>
 <pre class="r"><code>##### Table S6 (Correlations between PID-5 domains and FFM PD/GPPC scores)
 
 pp.s5 = pp.full[,c(&quot;anti.pid.s&quot;, &quot;anti.pid.i&quot;, 
-                    &quot;anti.siffm.count&quot;, &quot;anti.neos.count&quot;, &quot;anti.neoo.count&quot;, &quot;avoid.pid.s&quot;, &quot;avoid.pid.i&quot;, 
-                    &quot;avoid.siffm.count&quot;, &quot;avoid.neos.count&quot;, &quot;avoid.neoo.count&quot;, &quot;bord.pid.s&quot;, &quot;bord.pid.i&quot;, 
-                    &quot;bord.siffm.count&quot;, &quot;bord.neos.count&quot;, &quot;bord.neoo.count&quot;, &quot;nar.pid.s&quot;, &quot;nar.pid.i&quot;, 
-                    &quot;nar.siffm.count&quot;, &quot;nar.neos.count&quot;, &quot;nar.neoo.count&quot;, &quot;obs.pid.s&quot;, &quot;obs.pid.i&quot;, 
-                    &quot;obs.siffm.count&quot;, &quot;obs.neos.count&quot;, &quot;obs.neoo.count&quot;, &quot;schiz.pid.s&quot;, &quot;schiz.pid.i&quot;,
-                    &quot;schiz.siffm.count&quot;, &quot;schiz.neos.count&quot;, &quot;schiz.neoo.count&quot;, &quot;gen.z&quot;, &quot;NEGAFF.s&quot;, &quot;NEGAFF.i&quot;,
-                    &quot;ANTAG.s&quot;, &quot;ANTAG.i&quot;, &quot;DISINH.s&quot;, &quot;DISINH.i&quot;, &quot;PSYCHOT.s&quot;, &quot;PSYCHOT.i&quot;, &quot;DETACH.s&quot;, &quot;DETACH.i&quot;)]
+                   &quot;anti.siffm.count&quot;, &quot;anti.neos.count&quot;, &quot;anti.neoo.count&quot;, &quot;avoid.pid.s&quot;, 
+                   &quot;avoid.pid.i&quot;, &quot;avoid.siffm.count&quot;, &quot;avoid.neos.count&quot;, &quot;avoid.neoo.count&quot;,
+                   &quot;bord.pid.s&quot;, &quot;bord.pid.i&quot;, &quot;bord.siffm.count&quot;, &quot;bord.neos.count&quot;, 
+                   &quot;bord.neoo.count&quot;, &quot;nar.pid.s&quot;, &quot;nar.pid.i&quot;, &quot;nar.siffm.count&quot;, 
+                   &quot;nar.neos.count&quot;, &quot;nar.neoo.count&quot;, &quot;obs.pid.s&quot;, &quot;obs.pid.i&quot;, 
+                   &quot;obs.siffm.count&quot;, &quot;obs.neos.count&quot;, &quot;obs.neoo.count&quot;, &quot;schiz.pid.s&quot;, 
+                   &quot;schiz.pid.i&quot;, &quot;schiz.siffm.count&quot;, &quot;schiz.neos.count&quot;, &quot;schiz.neoo.count&quot;, 
+                   &quot;gen.z&quot;, &quot;NEGAFF.s&quot;, &quot;NEGAFF.i&quot;, &quot;ANTAG.s&quot;, &quot;ANTAG.i&quot;, &quot;DISINH.s&quot;, 
+                   &quot;DISINH.i&quot;, &quot;PSYCHOT.s&quot;, &quot;PSYCHOT.i&quot;, &quot;DETACH.s&quot;, &quot;DETACH.i&quot;)]
 
 ## Correlations with PID-5-SRF domains
 
@@ -523,12 +525,12 @@ round((corr.test(pp.s5[,c(3, 4, 5, 8, 9, 10, 13, 14, 15, 18, 19, 20, 23, 24, 25,
 
 
 pp.s6 = pp.full[,c(&quot;NEGAFF.s&quot;, &quot;NEGAFF.i&quot;,
-                     &quot;ANTAG.s&quot;, &quot;ANTAG.i&quot;, &quot;DISINH.s&quot;, &quot;DISINH.i&quot;, &quot;PSYCHOT.s&quot;, &quot;PSYCHOT.i&quot;, &quot;DETACH.s&quot;, &quot;DETACH.i&quot;,
-                     &quot;neu&quot;, &quot;ext&quot;, &quot;opn&quot;, &quot;agr&quot;, &quot;cncs&quot;,
-                     &quot;n1&quot;, &quot;n2&quot;, &quot;n3&quot;, &quot;n4&quot;, &quot;n5&quot;, &quot;n6&quot;, &quot;e1&quot;, &quot;e2&quot;, &quot;e3&quot;, &quot;e4&quot;, &quot;e5&quot;, &quot;e6&quot;,
-                     &quot;o1&quot;, &quot;o2&quot;, &quot;o3&quot;, &quot;o4&quot;, &quot;o5&quot;, &quot;o6&quot;, &quot;a1&quot;, &quot;a2&quot;, &quot;a3&quot;, &quot;a4&quot;, &quot;a5&quot;, &quot;a6&quot;, 
-                     &quot;c1&quot;, &quot;c2&quot;, 
-                     &quot;c3&quot;, &quot;c4&quot;, &quot;c5&quot;, &quot;c6&quot;)]
+                   &quot;ANTAG.s&quot;, &quot;ANTAG.i&quot;, &quot;DISINH.s&quot;, &quot;DISINH.i&quot;, &quot;PSYCHOT.s&quot;, &quot;PSYCHOT.i&quot;, 
+                   &quot;DETACH.s&quot;, &quot;DETACH.i&quot;,
+                   &quot;neu&quot;, &quot;ext&quot;, &quot;opn&quot;, &quot;agr&quot;, &quot;cncs&quot;,
+                   &quot;n1&quot;, &quot;n2&quot;, &quot;n3&quot;, &quot;n4&quot;, &quot;n5&quot;, &quot;n6&quot;, &quot;e1&quot;, &quot;e2&quot;, &quot;e3&quot;, &quot;e4&quot;, &quot;e5&quot;, &quot;e6&quot;,
+                   &quot;o1&quot;, &quot;o2&quot;, &quot;o3&quot;, &quot;o4&quot;, &quot;o5&quot;, &quot;o6&quot;, &quot;a1&quot;, &quot;a2&quot;, &quot;a3&quot;, &quot;a4&quot;, &quot;a5&quot;, &quot;a6&quot;, 
+                   &quot;c1&quot;, &quot;c2&quot;, &quot;c3&quot;, &quot;c4&quot;, &quot;c5&quot;, &quot;c6&quot;)]
 
 ## Correlations with PID-5-SRF domains
 
@@ -1002,8 +1004,8 @@ upper.negaff = intercepts.negaff + 1.96*se.negaff
 lower.negaff = intercepts.negaff - 1.96*se.negaff
 
 negaff.intercepts = cbind(at.negafffactor, intercepts.negaff, lower.negaff, upper.negaff)
-negaff.intercepts = as.data.frame(negaff.intercepts) ## Dataframe gives CIs for intercepts at different
-                                                     ## values of the GPPC</code></pre>
+negaff.intercepts = as.data.frame(negaff.intercepts) ## Dataframe gives CIs for intercepts at 
+                                                     ## different values of the GPPC</code></pre>
 <pre class="r"><code>####### Antagonism
 
 ## Centering ##
@@ -5367,8 +5369,9 @@ split(facet.p.adjust, ceiling(seq_along(facet.p.adjust)/8))</code></pre>
 pd.p.adjust = p.adjust(pd.p, method = &quot;BH&quot;, n = length(pd.p))
 pd.p.adjust = round(pd.p.adjust, 3)
 
-## Each line corresponds to each of the six PDs. First two p-values correspond to dz and r, respectively. 
-## Next six p-values correspond to: (a) b0 and b1 of base model, and (b) b0, b1, b2, b3 of moderation model. 
+## Each line corresponds to each of the six PDs. First two p-values correspond to dz and r, 
+## respectively. Next six p-values correspond to: (a) b0 and b1 of base model, and (b) b0, 
+## b1, b2, b3 of moderation model. 
 split(pd.p.adjust, ceiling(seq_along(pd.p.adjust)/8))</code></pre>
 <pre><code>## $`1`
 ## [1] 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.859
